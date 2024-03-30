@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace BE
 {
@@ -18,11 +14,10 @@ namespace BE
             set { id = value; }
         }
 
-     
-        private string nombre;
 
+        private string nombre;
+        //[RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El campo solo puede contener letras.")]
         [Required]
-        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El campo solo puede contener letras.")]
         public string Nombre
         {
             get { return nombre; }
@@ -31,8 +26,8 @@ namespace BE
 
         private string descripcion;
 
+        [Display(Name = "Descripción")]
         [Required]
-        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El campo solo puede contener letras.")]
         public string Descripcion
         {
             get { return descripcion; }
@@ -42,16 +37,24 @@ namespace BE
         private int referencia;
         [Required]
         [RegularExpression(@"^[0-9]+$", ErrorMessage = "El campo debe ser numérico.")]
-        //[Range(18, 100, ErrorMessage = "es menor de edad")]
         public int Referencia
         {
             get { return referencia; }
             set { referencia = value; }
         }
 
+        private int stock;
+
+        [Required]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "El campo debe ser numérico.")]
+        public int Stock
+        {
+            get { return stock; }
+            set { stock = value; }
+        }
+
         private string categoria;
         [Required]
-        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El campo solo puede contener letras.")]
         public string Categoria
         {
             get { return categoria; }
@@ -67,6 +70,50 @@ namespace BE
             set { precio = value; }
         }
 
+        private int id_tipo;
+
+        [Display(Name = "Tipo")]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "El campo debe ser numérico.")]
+        public int Id_tipo
+        {
+            get { return id_tipo; }
+            set { id_tipo = value; }
+        }
+
+        private int id_proveedor;
+
+        [Display(Name = "Proveedor")]
+        [Required]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "El campo debe ser numérico.")]
+        public int Id_proveedor
+        {
+            get { return id_proveedor; }
+            set { id_proveedor = value; }
+        }
+
+        private HttpPostedFileBase ruta_imagen;
+
+       
+        [Display(Name = "Ruta Imagen")]
+        public HttpPostedFileBase Ruta_imagen
+        {
+            get { return ruta_imagen; }
+            set { ruta_imagen = value; }
+        }
+
+        private string nombreImagen;
+       
+        public string NombreImagen
+        {
+            get { return nombreImagen; }
+            set { nombreImagen = value; }
+        }
+
+        //public class ArtGallery
+        //{
+        //    public string GallerName { get; set; }
+        //    public HttpPostedFileBase[] Documents { get; set; }
+        //}
     }
 
 }

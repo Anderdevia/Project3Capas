@@ -27,9 +27,13 @@ namespace Proyecto.DA
                 producto.Id = int.Parse(registro["id"].ToString());
                 producto.Nombre = registro["nombre"].ToString();
                 producto.Descripcion = registro["descripcion"].ToString();
+                producto.Stock = Convert.ToInt32(registro["stock"].ToString());
                 producto.Referencia = Convert.ToInt32(registro["referencia"].ToString());
                 producto.Categoria = registro["categoria"].ToString();
                 producto.Precio = Convert.ToDecimal(registro["precio"].ToString());
+                producto.Id_tipo = Convert.ToInt32(registro["id_tipo"].ToString());
+                producto.Id_proveedor = Convert.ToInt32(registro["id_proveedor"].ToString());
+                producto.NombreImagen = registro["ruta_imagen"].ToString();
                 productos.Add(producto);
             }
             return productos;
@@ -38,13 +42,18 @@ namespace Proyecto.DA
         // Método para insertar un nuevo producto
         public int Insertar(BE.Producto producto)
         {
+           
             // Crea una lista de parámetros para enviar al método Escribir de AccesoDA
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(ac.CrearParametro("@nombre", producto.Nombre));
             parameters.Add(ac.CrearParametro("@descripcion", producto.Descripcion));
             parameters.Add(ac.CrearParametro("@referencia", producto.Referencia.ToString()));
+            parameters.Add(ac.CrearParametro("@stock", producto.Stock.ToString()));
             parameters.Add(ac.CrearParametro("@categoria", producto.Categoria));
             parameters.Add(ac.CrearParametro("@precio", producto.Precio.ToString()));
+            parameters.Add(ac.CrearParametro("@id_tipo", producto.Id_tipo.ToString()));
+            parameters.Add(ac.CrearParametro("@id_proveedor", producto.Id_proveedor.ToString()));
+            parameters.Add(ac.CrearParametro("@ruta_imagen", producto.NombreImagen.ToString()));
 
             // Utiliza el método Escribir de AccesoDA para ejecutar la inserción y retorna el resultado
             return ac.Escribir("Insertar_Productos", parameters);
@@ -67,11 +76,11 @@ namespace Proyecto.DA
         }
 
         // Método para borrar un producto
-        public int Borrar(BE.Producto producto)
+        public int Borrar(int id)
         {
             // Crea una lista de parámetros para enviar al método Escribir de AccesoDA
             List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(ac.CrearParametro("@id", producto.Id.ToString()));
+            parameters.Add(ac.CrearParametro("@id", id.ToString()));
 
             // Utiliza el método Escribir de AccesoDA para ejecutar el borrado y retorna el resultado
             return ac.Escribir("Eliminar_Productos", parameters);
@@ -97,6 +106,9 @@ namespace Proyecto.DA
             producto.Referencia = Convert.ToInt32(registro["referencia"].ToString());
             producto.Categoria = registro["categoria"].ToString();
             producto.Precio = Math.Floor(Convert.ToDecimal(registro["precio"].ToString()));
+            producto.Stock = Convert.ToInt32(registro["stock"].ToString());
+            producto.Id_proveedor = Convert.ToInt32(registro["id_proveedor"].ToString());
+            producto.NombreImagen = registro["ruta_imagen"].ToString();
 
 
             return producto;

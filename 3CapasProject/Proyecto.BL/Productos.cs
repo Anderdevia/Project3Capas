@@ -31,10 +31,10 @@ namespace Proyecto.BL
         }
 
         // Método para eliminar un producto
-        public int Borrar(BE.Producto persona)
+        public int Borrar(int id)
         {
             // Llama al método Borrar() de la capa de datos para eliminar el producto
-            return MP.Borrar(persona);
+            return MP.Borrar(id);
         }
 
         // Método para obtener una lista de todos los productos

@@ -52,9 +52,11 @@ D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\rosl
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\roslyn\VBCSCompiler.exe.config
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Antlr3.Runtime.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\BE.dll
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\IdentityServer3.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Microsoft.Web.Infrastructure.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Newtonsoft.Json.dll
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Owin.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Proyecto.BL.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Proyecto.DA.dll
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\System.Web.Helpers.dll
@@ -68,6 +70,8 @@ D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\WebG
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\BE.pdb
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Proyecto.BL.pdb
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\Proyecto.DA.pdb
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\IdentityServer3.pdb
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\IdentityServer3.xml
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\System.Web.Helpers.xml
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\System.Web.Mvc.xml
 D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\MVC\bin\System.Web.Optimization.xml

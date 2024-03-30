@@ -51,7 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDA.cs" />
+    <Compile Include="MP_Categoria.cs" />
     <Compile Include="MP_Producto.cs" />
+    <Compile Include="MP_ProductoTienda.cs" />
+    <Compile Include="MP_Proveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
